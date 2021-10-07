@@ -22,7 +22,15 @@ grafo.add_edge('C', 'B')
 grafo.add_edge('C', 'D')
 grafo.add_edge('C', 'E')
 
-
+print('Grafo:')
+plt.figure() #Plot do gráfico para visualização
+nx.draw_networkx(grafo, pos=nx.spring_layout(grafo), with_labels=True)
+plt.show()
+print('Pontos e seus respectivos graus:')
+for e in grafo.degree():#Iteração para apresentar os pontos e quantidade de conexões 
+  print(e)
+graus = [grafo.degree('A'), grafo.degree('B'), grafo.degree('C'), grafo.degree('D'), grafo.degree('E'), grafo.degree('F')] #Lista contendo a quantidade de conexão de cada ponto
+print('Logo, o componente mais conectado é aquele que possui grau %d' %max(graus)) #Impressão do maior valor
 
 
 
