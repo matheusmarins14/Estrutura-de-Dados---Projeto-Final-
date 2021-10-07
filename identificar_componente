@@ -1,0 +1,29 @@
+import networkx as nx #Biblioteca para montagem do grafo
+import matplotlib.pyplot as plt #Biblioteca para plotagem do grafo e facilitar vizualização
+
+#Criar um grafo vazio
+grafo = nx.Graph()
+
+#Adicionar vértices
+grafo.add_node('A')
+grafo.add_node('B')
+grafo.add_node('C')
+grafo.add_node('D')
+grafo.add_node('E')
+grafo.add_node('F')
+
+#Adicionar arestas
+grafo.add_edge('B', 'A')
+grafo.add_edge('C', 'A')
+grafo.add_edge('D', 'A')
+grafo.add_edge('E', 'A')
+grafo.add_edge('F', 'C')
+grafo.add_edge('C', 'B')
+grafo.add_edge('C', 'D')
+grafo.add_edge('C', 'E')
+
+
+
+
+
+
